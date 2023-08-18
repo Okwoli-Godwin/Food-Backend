@@ -18,7 +18,7 @@ const bcrypt_1 = __importDefault(require("bcrypt"));
 const errorSpellOut_1 = require("../error/errorSpellOut");
 const userModel_1 = __importDefault(require("../Model/userModel"));
 exports.createUser = (0, asyncHander_1.asyncHandler)((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-    const { email, password } = req.body;
+    const { email, password, fullname } = req.body;
     const salt = yield bcrypt_1.default.genSalt(10);
     const hash = yield bcrypt_1.default.hash(password, salt);
     const checkIfUserExist = yield userModel_1.default.findOne({ email });
@@ -31,6 +31,7 @@ exports.createUser = (0, asyncHander_1.asyncHandler)((req, res, next) => __await
     const register = yield userModel_1.default.create({
         email,
         password: hash,
+        fullname
     });
     return res.status(errorSpellOut_1.HttpCode.CREATED).json({
         message: "user created",

@@ -7,7 +7,7 @@ import userModel from "../Model/userModel";
 
 export const createUser = asyncHandler(
   async (req: Request, res: Response, next: NextFunction) => {
-    const { email, password } = req.body;
+    const { email, password, fullname } = req.body;
     const salt = await bcrypt.genSalt(10);
     const hash = await bcrypt.hash(password, salt);
 
@@ -25,6 +25,7 @@ export const createUser = asyncHandler(
     const register = await userModel.create({
       email,
       password: hash,
+      fullname
     });
 
     return res.status(HttpCode.CREATED).json({

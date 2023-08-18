@@ -3,6 +3,7 @@ export interface Iuser {
   password: string;
   longitude: string;
   latitude: string;
+  fullname: string
 } // setting the Object Type for User
 export interface IAdmin {
   email: string;

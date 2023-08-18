@@ -18,6 +18,10 @@ const userModel = new mongoose.Schema<Iuser>(
       type: String,
       required: [true, "Password is Required"],
     },
+    fullname: {
+      type: String,
+      required: [true, "name is required"],
+    }
   },
   { timestamps: true }
 );

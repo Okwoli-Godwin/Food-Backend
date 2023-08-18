@@ -16,5 +16,9 @@ const userModel = new mongoose_1.default.Schema({
         type: String,
         required: [true, "Password is Required"],
     },
+    fullname: {
+        type: String,
+        required: [true, "name is required"],
+    }
 }, { timestamps: true });
 exports.default = mongoose_1.default.model("FIWA(User)", userModel);
