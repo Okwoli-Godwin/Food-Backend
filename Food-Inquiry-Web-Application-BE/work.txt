@@ -1,0 +1,11 @@
+You should have these endpoints:
+   /users - to view all registered users
+  /users/<str: mary> - to view a particular user
+   /profile- to view authenticated user's profile
+   /recipes - to view all searched users
+   /restaurants - to view all searched restaurants
+
+
+   Google Id = 730919110921-2rl40ck7dnkhc4gm1idq7599rb29ubj5.apps.googleusercontent.com
+Google secret = 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
+Google Refreshtoken = 1//04g38ARY8A7ZFCgYIARAAGAQSNwF-L9IrRTtHoZvmgrCbFK7P5_FlFY0WXB4LTHHolfiaPUcv7mKis_njZJ_m1QWiLbouBne04aA
